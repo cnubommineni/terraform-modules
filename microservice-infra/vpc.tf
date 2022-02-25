@@ -44,7 +44,7 @@ locals {
     module.vpc.elasticache_route_table_ids))
 }
 
-
+/*
 resource "aws_vpc_peering_connection" "ms_peering" {
   vpc_id        = module.vpc.vpc_id
   peer_vpc_id   = var.peer_vpc
@@ -58,7 +58,7 @@ resource "aws_vpc_peering_connection" "ms_peering" {
   }
 }
 
-/*
+
 resource "aws_route" "peering_table" {
   count                     = length(local.all_route_tables)
   route_table_id            = local.all_route_tables[count.index]
