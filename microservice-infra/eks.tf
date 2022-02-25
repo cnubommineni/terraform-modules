@@ -31,8 +31,8 @@ module "eks" {
   cluster_version = "1.21"
   subnet_ids         = module.vpc.private_subnets
   cluster_enabled_log_types = [ "audit", "api", "authenticator" ]
-  cluster_endpoint_private_access = true
-  cluster_endpoint_public_access  = false
+  cluster_endpoint_private_access = false
+  cluster_endpoint_public_access  = true
   tags = {
     Environment = var.environment_name
     GithubRepo  = "terraform-aws-eks"
