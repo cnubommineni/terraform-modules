@@ -7,7 +7,7 @@ resource "kubernetes_namespace" "prometheus-namespace" {
 }
 
 module "helm-chart-prometheus-operator" {
-  source = "git@bitbucket.org:securonixsnypr/helm-chart-prometheus-operator.git"
+  source = "git@github.com:cloudrural/helm-charts-1.git"
 }
 
 resource "helm_release" "prometheus-operator" {
