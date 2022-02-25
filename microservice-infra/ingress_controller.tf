@@ -1,5 +1,5 @@
 
-resource "kubernetes_namespace" "ingress-nginx-namespace" {
+/*resource "kubernetes_namespace" "ingress-nginx-namespace" {
   depends_on = [module.eks]
   count = var.create_ingress_nginx ? 1 : 0
   metadata {
@@ -40,3 +40,4 @@ resource "helm_release" "ingress-controller" {
 locals {
   ssl_cert = var.ssl_cert_arn
 }
+*/
