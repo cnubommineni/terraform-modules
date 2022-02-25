@@ -13,7 +13,7 @@ module "helm-chart-prometheus-operator" {
 resource "helm_release" "prometheus-operator" {
   name       = "prometheus"
   repository = "https://prometheus-community.github.io/helm-charts"
-  chart      = "".terraform/modules/microservice-infra./helm-chart-prometheus-operator/charts/kube-prometheus-stack"
+  chart      = ".terraform/modules/microservice-infra./helm-chart-prometheus-operator/charts/kube-prometheus-stack"
   namespace  = "monitoring"
   values = [<<EOF
 prometheus:
